@@ -1,0 +1,69 @@
+# data
+**.log
+
+
+# distribution of python packages
+**/dist/**
+dist/**
+meax.egg-info/**
+**/meax.egg-info/**
+
+
+# macOS file system
+Icon
+.DS_Store
+**/.DS_Store
+
+
+# jupyter notebooks
+**/.ipynb_checkpoints
+
+
+# pycharm
+.idea
+**/.idea/**
+
+
+# pycache
+**/__pycache__
+**/__pycache__/**
+.mypy_cache
+**/.mypy_cache
+
+
+# sphinx
+**/.doctrees
+**/.buildinfo
+
+
+# drawio
+**/.$**.bkp
+
+
+# obsidian
+.obsidian
+**/.obsidian
+
+
+# dask-distributed
+**/dask-worker-space/**
+**/dask-worker-space/global.lock
+**/dask-worker-space/purge.lock
+**/dask-worker-space/worker**.dirlock
+**/dask-worker-space/worker/**
+
+
+# Visual Studio Code
+./Mea X
+./Mea X/**
+Mea X.idea
+
+**/.iml
+.vscode/
+.vscode/settings.json 
+.vscode/**
+
+
+# Tresorit
+**.tresorit
+**.tresorit/**
