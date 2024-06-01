@@ -12,7 +12,7 @@ Project-URL: Bug Tracker, https://github.com/fschwar4/pynamicgain/issues
 Project-URL: Changelog, https://github.com/fschwar4/pynamicgain/blob/main/CHANGELOG.md
 Keywords: neuroscience,electrophysiology,patch clamp,scientific software,data analysis,dynamic gain
 Classifier: Programming Language :: Python :: 3 :: Only
-Classifier: License :: OSI Approved :: AGPL-3.0-only
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
 Classifier: Operating System :: OS Independent
 Requires-Python: >=3.11
 Description-Content-Type: text/markdown

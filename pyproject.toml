@@ -42,7 +42,7 @@ keywords = [
 ]
 classifiers = [
   "Programming Language :: Python :: 3 :: Only",
-  "License :: OSI Approved :: AGPL-3.0-only",
+  "License :: OSI Approved :: GNU Affero General Public License v3",
   "Operating System :: OS Independent",
 ]
 
