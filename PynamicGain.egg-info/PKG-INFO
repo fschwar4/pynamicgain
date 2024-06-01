@@ -5,8 +5,11 @@ Summary: Dynamic Gain input generation for distributed PClamp setups.
 Author: Andreas Neef, Stefan Pommer
 Author-email: Friedrich Schwarz <friedrichschwarz@unigoettingen.de>
 Maintainer-email: Friedrich Schwarz <friedrichschwarz@unigoettingen.de>
-Project-URL: homepage, https://github.com/fschwar4/pynamicgain
-Project-URL: bug_tracker, https://github.com/fschwar4/pynamicgain/issues
+Project-URL: Repository, https://github.com/fschwar4/pynamicgain
+Project-URL: Documentation, https://fschwar4.github.io/pynamicgain/
+Project-URL: Homepage, https://fschwar4.github.io/pynamicgain/
+Project-URL: Bug Tracker, https://github.com/fschwar4/pynamicgain/issues
+Project-URL: Changelog, https://github.com/fschwar4/pynamicgain/blob/main/CHANGELOG.md
 Keywords: neuroscience,electrophysiology,patch clamp,scientific software,data analysis,dynamic gain
 Classifier: Programming Language :: Python :: 3 :: Only
 Classifier: License :: OSI Approved :: AGPL-3.0-only

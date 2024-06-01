@@ -56,8 +56,11 @@ pydg_help = "pynamicgain.__main__:help"
 
 
 [project.urls]
-homepage = "https://github.com/fschwar4/pynamicgain"
-bug_tracker = "https://github.com/fschwar4/pynamicgain/issues"
+Repository = "https://github.com/fschwar4/pynamicgain"
+Documentation = "https://fschwar4.github.io/pynamicgain/"
+Homepage  = "https://fschwar4.github.io/pynamicgain/"
+"Bug Tracker" = "https://github.com/fschwar4/pynamicgain/issues"
+Changelog = "https://github.com/fschwar4/pynamicgain/blob/main/CHANGELOG.md"
 
 
 [project.optional-dependencies]
