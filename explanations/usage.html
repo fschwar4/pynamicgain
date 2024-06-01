@@ -1,0 +1,749 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Usage &#8212; Pynamic Gain</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../_static/documentation_options.js?v=f7cdbf68"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'explanations/usage';</script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Motivations" href="motivations.html" />
+    <link rel="prev" title="First Steps" href="first_steps.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Pynamic Gain</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="first_steps.html">
+    First Steps
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="motivations.html">
+    Motivations
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../api_documentation.html">
+    API Documentation
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="deep_settings.html">
+    Advanced
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="development.html">
+    Development
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item"><!-- docs/_templates/version.html -->
+
+
+<div class="version">
+  <strong>Version:</strong> 0.0.9
+</div>
+</div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/fschwar4/pynamicgain" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="first_steps.html">
+    First Steps
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="motivations.html">
+    Motivations
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../api_documentation.html">
+    API Documentation
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="deep_settings.html">
+    Advanced
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="development.html">
+    Development
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><!-- docs/_templates/version.html -->
+
+
+<div class="version">
+  <strong>Version:</strong> 0.0.9
+</div>
+</div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/fschwar4/pynamicgain" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"></div>
+</nav></div>
+        <div class="sidebar-primary-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="first_steps.html">
+    First Steps
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="motivations.html">
+    Motivations
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../api_documentation.html">
+    API Documentation
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="deep_settings.html">
+    Advanced
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="development.html">
+    Development
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/fschwar4/pynamicgain" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Usage</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Link to this heading">#</a></h1>
+<p>If you are using the package for the first time, you should create a new setup. This setup will contain all the necessary information for the analysis and the generation of the <code class="docutils literal notranslate"><span class="pre">.abf</span></code>-files. Please refer to the <a class="reference internal" href="first_steps.html"><span class="std std-doc">First Steps</span></a> for more information.</p>
+<section id="do-experiments">
+<h2>Do experiments<a class="headerlink" href="#do-experiments" title="Link to this heading">#</a></h2>
+<p>There are currently three main commands available for running experiments:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pydg_generate</span></code>: Generates input files only.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pydg_analyse</span></code>: Analyse a given recording only.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pydg_generate_and_analyse</span></code>: Generates an input file and tracks a given directory to analyse new recordings.</p></li>
+</ol>
+<p>All these commands can be used with the `–help’ flag to get more information about the command and its options.</p>
+<p><strong>If the setup file is not in the current working directory, you need to specify the path to directory with the setup file. This can be done by using the <code class="docutils literal notranslate"><span class="pre">--setup_dir</span></code> flag.</strong></p>
+<section id="generate-input-files">
+<h3>Generate input files<a class="headerlink" href="#generate-input-files" title="Link to this heading">#</a></h3>
+<p>The following command line arguments are <strong>necessary</strong> for the generation commands:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;std&gt;</span></code>: The standard deviation of the input noise. This must be given, if input is generated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;corr_t&gt;</span></code>: The correlation time of the input noise. This must be given, if input is generated.</p></li>
+</ul>
+<p>Ideally, the standard values of the input file (e.g. the number of sweeps) are already set in the setup file. Nevertheless, you can overwrite these values with the following command line arguments:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--n_sweeps</span></code>: The number of sweeps to generate. If not given, the default value from the setup file is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--duration</span></code>: The duration of the sweeps in seconds. If not given, the default value from the setup file is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--sampling_rate</span></code>: The sampling rate of the sweeps in Hz. If not given, the default value from the setup file is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--out_dir</span></code>: The output directory for the ABF file. If not given, the default value from the setup file is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--backup_dir</span></code>: The path to the backup directory. If not given, the default value from the setup file is used (or out_dir/backup if not set in the setup file).</p></li>
+</ul>
+</section>
+<section id="analyse">
+<h3>Analyse<a class="headerlink" href="#analyse" title="Link to this heading">#</a></h3>
+<p>Two types for the analysis are available:</p>
+<ol class="arabic simple">
+<li><p>Analyse a given file.</p></li>
+<li><p>Observes a directory for newly created files and analyse the latest file.</p></li>
+</ol>
+<p>Use the flag <code class="docutils literal notranslate"><span class="pre">--analyse_file</span></code> to specify a certain file for the analysis.</p>
+<p>Use the flag <code class="docutils literal notranslate"><span class="pre">--input_dir</span></code> to overwrite the input directory (“the directory to watch for new files”) from the setup file.</p>
+<p>Both analyses types can be further specified with the following flags:
+- <code class="docutils literal notranslate"><span class="pre">--visualise</span></code>:  Whether to visualise the results (Overwrites the setup file)
+- <code class="docutils literal notranslate"><span class="pre">--analyse_dir</span></code>: The directory to save the analysis results (Overwrites the setup file; default: input_dir/analysis)</p>
+</section>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
+<section id="id1">
+<h4>Generate input files<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<section id="with-the-setup-file-in-the-current-working-directory">
+<h5>With the setup file in the current working directory<a class="headerlink" href="#with-the-setup-file-in-the-current-working-directory" title="Link to this heading">#</a></h5>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pydg_generate<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">0</span>.1
+</pre></div>
+</div>
+<p>Generates input files with an OU process with a standard deviation of 3pA and a correlation time of 0.1s.</p>
+</section>
+<section id="with-the-setup-file-in-a-different-directory">
+<h5>With the setup file in a different directory<a class="headerlink" href="#with-the-setup-file-in-a-different-directory" title="Link to this heading">#</a></h5>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pydg_generate<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>--setup_dir<span class="o">=</span>/path/to/setup
+</pre></div>
+</div>
+<p>Generates input files with an OU process with a standard deviation of 3pA and a correlation time of 4s. The setup file is located in the directory <code class="docutils literal notranslate"><span class="pre">/path/to/setup</span></code>.</p>
+</section>
+</section>
+<section id="id2">
+<h4>Analyse<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<p>The current analysis (‘mininal spike train analysis’) is sweepwise and will print the results to the stdout, e.g.:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Starting<span class="w"> </span>analysis<span class="w"> </span>of<span class="w"> </span>2023_07_17_0055<span class="w"> </span>...
+
+Sweep<span class="w"> </span><span class="m">0</span><span class="w"> </span>has<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>properties:
+<span class="w">	</span>MFR:<span class="w"> </span><span class="m">4</span>.75<span class="w"> </span>Hz
+<span class="w">	</span>CV:<span class="w"> </span><span class="m">0</span>.78
+<span class="w">	</span>LVR:<span class="w"> </span><span class="m">0</span>.68
+</pre></div>
+</div>
+<p>Furthermore, a PDF will be stored in the analysis directory (if selected). Each page will contain some overview plots of one sweep.</p>
+<p><img alt="Example analysis" src="../_images/example_analysis.png" /></p>
+<p>Most plot settings (e.g. start and duration of the overview plot or the number of bins for the ISI histogram) can be set in the setup file. See <a class="reference internal" href="deep_settings.html"><span class="std std-doc">Deep Settings</span></a> for more information.</p>
+<section id="analyse-a-given-file">
+<h5>Analyse a given file<a class="headerlink" href="#analyse-a-given-file" title="Link to this heading">#</a></h5>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pydg_analyse<span class="w"> </span>--analyse_file<span class="o">=</span>/path/to/file.abf
+</pre></div>
+</div>
+<p>Generates a mini spike train analysis for the given file (sweepwise).</p>
+</section>
+</section>
+<section id="generate-and-analyse">
+<h4>Generate and analyse<a class="headerlink" href="#generate-and-analyse" title="Link to this heading">#</a></h4>
+<section id="generate-and-analyse-a-given-file-setup-file-in-the-current-working-directory">
+<h5>Generate and analyse a given file (setup file in the current working directory)<a class="headerlink" href="#generate-and-analyse-a-given-file-setup-file-in-the-current-working-directory" title="Link to this heading">#</a></h5>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pydg_generate_and_analyse<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">0</span>.025<span class="w">  </span>--input_dir<span class="o">=</span>/path/to/input
+</pre></div>
+</div>
+<p>Generates input files with an OU process with a standard deviation of 2pA and a correlation time of 0.025s.<br />
+Furthermore, the directory <code class="docutils literal notranslate"><span class="pre">/path/to/input</span></code> is observed for new files. If a new file appears, it is analysed.
+The observation terminates if all sweeps are analysed or 3 minutes after the the assumed recording time.</p>
+</section>
+<section id="generate-and-analyse-a-given-file-setup-file-in-a-different-directory">
+<h5>Generate and analyse a given file (setup file in a different directory)<a class="headerlink" href="#generate-and-analyse-a-given-file-setup-file-in-a-different-directory" title="Link to this heading">#</a></h5>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pydg_generate_and_analyse<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">0</span>.025<span class="w"> </span>--setup_dir<span class="o">=</span>/path/to/setup
+</pre></div>
+</div>
+<p>The standard values for the input file are taken from the setup file located in the directory <code class="docutils literal notranslate"><span class="pre">/path/to/setup</span></code>.</p>
+</section>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="update-the-package">
+<h2>Update the package<a class="headerlink" href="#update-the-package" title="Link to this heading">#</a></h2>
+<p>If you want to update the package, without recreating the environment, you can use the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>--force-reinstall<span class="w"> </span>pynamicgain
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>uninstall<span class="w"> </span>pynamicgain
+pip<span class="w"> </span>install<span class="w"> </span>pynamicgain
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="i-need-help">
+<h2>I need help!?<a class="headerlink" href="#i-need-help" title="Link to this heading">#</a></h2>
+<p>In general, there are two help functions available:</p>
+<ol class="arabic simple">
+<li><p>To get an overview of all available top level commands, use <code class="docutils literal notranslate"><span class="pre">pydg_help</span></code>.</p></li>
+<li><p>To get information about a specific command, use the subcommand in combination with the <code class="docutils literal notranslate"><span class="pre">--help</span></code> flag. For example, <code class="docutils literal notranslate"><span class="pre">pydg_generate</span> <span class="pre">--help</span></code>.</p></li>
+</ol>
+<p>If nothing helps, just write us! We are happy to help you out.</p>
+<section id="other">
+<h3>Other<a class="headerlink" href="#other" title="Link to this heading">#</a></h3>
+<p>Don’t forget to activate the correct (conda) environment before you start the analysis. You can do this with the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>pydg_analysis
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="first_steps.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">First Steps</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="motivations.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Motivations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#do-experiments">Do experiments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-input-files">Generate input files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse">Analyse</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Generate input files</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#with-the-setup-file-in-the-current-working-directory">With the setup file in the current working directory</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#with-the-setup-file-in-a-different-directory">With the setup file in a different directory</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Analyse</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-a-given-file">Analyse a given file</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-and-analyse">Generate and analyse</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-and-analyse-a-given-file-setup-file-in-the-current-working-directory">Generate and analyse a given file (setup file in the current working directory)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-and-analyse-a-given-file-setup-file-in-a-different-directory">Generate and analyse a given file (setup file in a different directory)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#update-the-package">Update the package</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-need-help">I need help!?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other">Other</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/explanations/usage.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Friedrich Schwarz, Stefan Pommer, Andreas Neef.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
